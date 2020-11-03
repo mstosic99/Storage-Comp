@@ -10,9 +10,7 @@ public abstract class StorageSpec {
 	
 	protected String fileName;
 	
-	private boolean isAutoIncrement;
-	
-	
+	private boolean isAutoIncrement; // TODO mogucnost izbora
 	
 	
 	public abstract void save(Entity entity);

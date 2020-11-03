@@ -4,48 +4,57 @@ import java.util.Map;
 //import java.util.UUID;
 import java.util.concurrent.atomic.AtomicLong;
 
+
 public class Entity {
 
-	private static AtomicLong id = new AtomicLong();
+	private static AtomicLong idIncrementing = new AtomicLong(); // Npr za gson ovaj atribut treba da se excluduje za serijalizaciju
+	private int id;
 	private String naziv;
-	private Map<String, String> attributes;
-	private Map<String, Entity> subEntities;
+	private Map<String, String> properties = null;
+	private Map<String, Entity> subEntities = null;
 
-	public Entity(String naziv) {
+	public Entity(String naziv, Map<String, String> properties, Map<String, Entity> subEntities) {
 
 		this.naziv = naziv;
+		this.properties = properties;
+		this.subEntities = subEntities;
+		
 		generateAutoIncrementID();
 
 	}
 	
+	public Entity(int id, String naziv, Map<String, String> properties, Map<String, Entity> subEntities) {
+		
+		// TODO dodavanje ID od strane korisnika, potrebna provera jedinstvenosti
+		this.id = id;
+		this.naziv = naziv;
+		this.properties = properties;
+		this.subEntities = subEntities;
+		
+	}
+	
 	public void addAttributes(Map<String, String> attributes) {
-		this.attributes = attributes;
+		this.properties = attributes;
 	}
 	
 	public void addSubEntities(Map<String, Entity> subEntities) {
 		this.subEntities = subEntities;
 	}
 
-	public Entity(String naziv, String id) {
-
-		this.naziv = naziv;
-		// TODO dodavanje ID od strane korisnika, potrebna provera jedinstvenosti
-
-	}
-
 	
-	// Nije human-readable (String)
+	//	Nije human-readable (String)
 //	private void generateAndSetID() {
 //		this.id = UUID.randomUUID().toString();
 //	}
 
 
-	private static String generateAutoIncrementID() {
-		return String.valueOf(id.getAndIncrement());
+	private void generateAutoIncrementID() {
+		long x = idIncrementing.getAndIncrement();
+		this.id = (int) x;
 	}
 
 	public long getId() {
-		return id.longValue();
+		return id;
 	}
 
 	public String getNaziv() {
@@ -60,7 +69,7 @@ public class Entity {
 		return subEntities;
 	}
 	
-	public Map<String, String> getAttributes() {
-		return attributes;
+	public Map<String, String> getProperties() {
+		return properties;
 	}
 }

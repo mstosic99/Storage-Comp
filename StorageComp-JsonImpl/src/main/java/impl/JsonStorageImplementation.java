@@ -84,7 +84,9 @@ public class JsonStorageImplementation extends StorageSpec {
 	@Override
 	public void save(List<Entity> entities) {
 		
-		
+		for(Entity entity : entities) {
+			save(entity);
+		}
 		
 	}
 

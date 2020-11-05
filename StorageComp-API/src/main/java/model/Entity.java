@@ -1,5 +1,6 @@
 package model;
 
+import java.util.List;
 import java.util.Map;
 //import java.util.UUID;
 import java.util.concurrent.atomic.AtomicLong;
@@ -11,9 +12,9 @@ public class Entity {
 	private int id;
 	private String naziv;
 	private Map<String, String> properties = null;
-	private Map<String, Entity> subEntities = null;
+	private Map<String, List<Entity>> subEntities = null;
 
-	public Entity(String naziv, Map<String, String> properties, Map<String, Entity> subEntities) {
+	public Entity(String naziv, Map<String, String> properties, Map<String, List<Entity>> subEntities) {
 
 		this.naziv = naziv;
 		this.properties = properties;
@@ -23,7 +24,7 @@ public class Entity {
 
 	}
 	
-	public Entity(int id, String naziv, Map<String, String> properties, Map<String, Entity> subEntities) {
+	public Entity(int id, String naziv, Map<String, String> properties, Map<String, List<Entity>> subEntities) {
 		
 		// TODO dodavanje ID od strane korisnika, potrebna provera jedinstvenosti
 		this.id = id;
@@ -37,7 +38,7 @@ public class Entity {
 		this.properties = attributes;
 	}
 	
-	public void addSubEntities(Map<String, Entity> subEntities) {
+	public void addSubEntities(Map<String, List<Entity>> subEntities) {
 		this.subEntities = subEntities;
 	}
 
@@ -65,7 +66,7 @@ public class Entity {
 		this.naziv = naziv;
 	}
 	
-	public Map<String, Entity> getSubEntities() {
+	public Map<String, List<Entity>> getSubEntities() {
 		return subEntities;
 	}
 	

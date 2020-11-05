@@ -1,6 +1,7 @@
 package api;
 
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
@@ -13,11 +14,11 @@ public abstract class StorageSpec {
 	private boolean isAutoIncrement; // TODO mogucnost izbora
 	
 	
-	public abstract void save(Entity entity);
+	public abstract void save(Entity entity) throws IOException;
 	
 	public abstract void save(List<Entity> entities);
 	
-	public void save(int id, String name, Map<String, String> properties, Map<String, Entity> subEntities) {
+	public void save(int id, String name, Map<String, String> properties, Map<String, List<Entity>> subEntities) throws IOException {
 		
 		if(isAutoIncrement) {
 			System.out.println("Id je ignorisan(Autoincrement)");

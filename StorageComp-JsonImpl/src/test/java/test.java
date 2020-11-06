@@ -86,11 +86,11 @@ public class test {
 		
 		Entity finalEntity2 = new Entity("osoba", properties2, subEntitiesPack2);
 		
-//		System.out.println(finalEntity1.toString());
+		System.out.println(finalEntity1.toString());
 		try {
 			ss.save(finalEntity1);
 			ss.save(finalEntity2);
-			System.out.println(ss.readAll().toString());
+//			System.out.println(ss.readAll().toString());
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

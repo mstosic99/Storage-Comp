@@ -1,7 +1,6 @@
 package impl;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -9,13 +8,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map.Entry;
-import java.util.Set;
 
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
 import com.google.gson.*;
-import com.google.gson.internal.LinkedTreeMap;
 
 import api.ImplementorManager;
 import api.StorageSpec;
@@ -26,10 +21,15 @@ public class JsonStorageImplementation extends StorageSpec {
 	static {
 		ImplementorManager.registerImplementor(new JsonStorageImplementation());
 	}
-
+	
 	private Gson gson = new Gson();
-	JsonArray jArray = new JsonArray();
+	private JsonArray jArray = new JsonArray();
+	
+	
 
+	
+
+	@SuppressWarnings("resource")
 	@Override
 	public void save(Entity entity) {
 
@@ -37,6 +37,13 @@ public class JsonStorageImplementation extends StorageSpec {
 
 		try {
 
+			try {
+				new FileReader(new File(fileName));
+				readAll();								// Pre svega ucitavamo postojece podatke iz json fajla (ako ne postoji fajl,
+														// znaci da jos nije kreiran, pa se nista ne desava
+			} catch (IOException e) {
+			}
+			
 			fileWriter = new FileWriter(new File(fileName));
 
 			JsonObject object = new JsonObject();
@@ -101,7 +108,8 @@ public class JsonStorageImplementation extends StorageSpec {
 		
 		FileReader reader = new FileReader(new File(fileName));
 		JsonElement jsonElement = gson.fromJson(reader, JsonElement.class);
-		JsonArray jArray = (JsonArray) jsonElement;
+		JsonArray jsonArray = (JsonArray) jsonElement;
+		jArray = jsonArray;
 
 //		ArrayList<String> listdata = new ArrayList<String>();
 
@@ -117,7 +125,7 @@ public class JsonStorageImplementation extends StorageSpec {
 //		}
 
 
-		for (JsonElement element : jArray) {
+		for (JsonElement element : jsonArray) {
 
 			JsonObject object = (JsonObject) element;
 			Entity entity = new Entity();
@@ -196,10 +204,10 @@ public class JsonStorageImplementation extends StorageSpec {
 //		
 //	}
 	
-	private List<Entity> convertFromJsonArrayPrimitiveEntity(JsonArray jArray) {
+	private List<Entity> convertFromJsonArrayPrimitiveEntity(JsonArray jsonArray) {
 		
 		List<Entity> toReturn = new ArrayList<Entity>();
-		for(JsonElement element : jArray) {
+		for(JsonElement element : jsonArray) {
 			
 			JsonObject object = (JsonObject) element;
 			Entity entity = new Entity();

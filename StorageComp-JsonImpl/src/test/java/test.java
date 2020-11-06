@@ -86,7 +86,7 @@ public class test {
 		
 		Entity finalEntity2 = new Entity("osoba", properties2, subEntitiesPack2);
 		
-		System.out.println(finalEntity1.toString());
+		System.out.println("123412341234"+finalEntity1.toString());
 		try {
 			ss.save(finalEntity1);
 			ss.save(finalEntity2);

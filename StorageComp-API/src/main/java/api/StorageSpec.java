@@ -33,7 +33,7 @@ public abstract class StorageSpec {
 		
 	}
 	
-	public abstract List<Entity> read();				// Ucitaj sve entitete
+	public abstract List<Entity> readAll() throws IOException;				// Ucitaj sve entitete
 	
 	public abstract List<Entity> read(int[] ids);  		// Ucitaj entitete za id
 	

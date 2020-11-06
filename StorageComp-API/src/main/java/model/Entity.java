@@ -1,5 +1,6 @@
 package model;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 //import java.util.UUID;
@@ -8,11 +9,17 @@ import java.util.concurrent.atomic.AtomicLong;
 
 public class Entity {
 
+	
+
 	private static AtomicLong idIncrementing = new AtomicLong(); // Npr za gson ovaj atribut treba da se excluduje za serijalizaciju
 	private int id;
 	private String naziv;
-	private Map<String, String> properties = null;
-	private Map<String, List<Entity>> subEntities = null;
+	private Map<String, String> properties = new HashMap<String, String>();
+	private Map<String, List<Entity>> subEntities = new HashMap<String, List<Entity>>();
+	
+	public Entity() {
+		
+	}
 
 	public Entity(String naziv, Map<String, String> properties, Map<String, List<Entity>> subEntities) {
 
@@ -34,14 +41,21 @@ public class Entity {
 		
 	}
 	
-	public void addAttributes(Map<String, String> attributes) {
-		this.properties = attributes;
+	public void setProperties(Map<String, String> properties) {
+		this.properties = properties;
 	}
 	
-	public void addSubEntities(Map<String, List<Entity>> subEntities) {
+	public void setSubEntities(Map<String, List<Entity>> subEntities) {
 		this.subEntities = subEntities;
 	}
+	
+	public void addProperty(String key, String value) {
+		properties.put(key, value);
+	}
 
+	public void addSubEntity(String key, List<Entity> value) {
+		subEntities.put(key, value);
+	}
 	
 	//	Nije human-readable (String)
 //	private void generateAndSetID() {
@@ -56,6 +70,10 @@ public class Entity {
 
 	public long getId() {
 		return id;
+	}
+	
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getNaziv() {
@@ -72,5 +90,11 @@ public class Entity {
 	
 	public Map<String, String> getProperties() {
 		return properties;
+	}
+	
+	@Override
+	public String toString() {
+		return "Entity [id=" + id + ", naziv=" + naziv + ", properties=" + properties + ", subEntities=" + subEntities
+				+ "]";
 	}
 }

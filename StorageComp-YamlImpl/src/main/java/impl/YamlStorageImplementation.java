@@ -20,7 +20,7 @@ public class YamlStorageImplementation extends StorageSpec {
 	}
 
 	@Override
-	public List<Entity> read() {
+	public List<Entity> readAll() {
 		// TODO Auto-generated method stub
 		return null;
 	}

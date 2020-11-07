@@ -26,11 +26,11 @@
 			<groupId>SoftComp</groupId>
 			<artifactId>StorageComp-API</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
-			<!-- 
+
+			<!--
 			<scope>system</scope>
-			<systemPath>${project.basedir}/lib/StorageComp-API.jar</systemPath> 
-			-->
-			
+			<systemPath>${project.basedir}/lib/StorageComp-API.jar</systemPath> -->
+
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->

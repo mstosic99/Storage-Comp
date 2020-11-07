@@ -19,61 +19,34 @@ import model.Entity;
 public class JsonStorageImplementation extends StorageSpec {
 
 	static {
-		String filePath = new File("").getAbsolutePath();
-//		filePath = filePath.substring(0, filePath.length() - 21); // Uzasna linija pls ignore hahahh
-		filePath += "\\src\\test\\resources\\test1.json";
-		ImplementorManager.registerImplementor(new JsonStorageImplementation(filePath));
+		ImplementorManager.registerImplementor(new JsonStorageImplementation());
 	}
 
 	private Gson gson = new Gson();
 	private JsonArray jArray = new JsonArray();
 
-	public JsonStorageImplementation(String filePath) {
-		
-		this.fileName = filePath;
-		try {
-			
-			
-			List<Entity> entities = readAll();
-			if(entities == null)
-				throw new NullPointerException();
-			
-			for(Entity entity : entities) {
-				Entity.getUsedIDs().add((Integer) entity.getId());
-				for(HashMap.Entry<String, String> property : entity.getProperties().entrySet()) {
-					if(property.getKey().equals("id"))
-						Entity.getUsedIDs().add(Integer.parseInt(property.getValue()));
-				}
-				
-				for(HashMap.Entry<String, List<Entity>> subEntity : entity.getSubEntities().entrySet()) {
-					for(Entity e : subEntity.getValue()) {
-						Entity.getUsedIDs().add((Integer) e.getId());
-					}
-				}
-			}
-			
-		}catch (Exception e) {
-			System.err.println("Gadan Exception");
-		}
+	public JsonStorageImplementation() {
 		
 	}
 	
+	
 	@Override
 	public void save(Entity entity) {
-
+		//ako u currFile ima preko 50 entiteta napravi novi fajl
+		
 		FileWriter fileWriter;
-
+		
 		try {
 
 			try {
-				FileReader fr = new FileReader(new File(fileName));
+				FileReader fr = new FileReader(new File(folderName));
 				readAll(); // Pre svega ucitavamo postojece podatke iz json fajla (ako ne postoji fajl,
 							// znaci da jos nije kreiran, pa se nista ne desava
 				fr.close();
 			} catch (IOException e) {
 			}
 
-			fileWriter = new FileWriter(new File(fileName));
+			fileWriter = new FileWriter(new File(folderName));
 
 			JsonObject object = new JsonObject();
 
@@ -129,34 +102,28 @@ public class JsonStorageImplementation extends StorageSpec {
 		}
 
 	}
-
 	@Override
-	public List<Entity> readAll() throws IOException {
-
+	public List<Entity> readAll() throws IOException{
+		//lista fajlova = FILE.FINDFILES (.json)
+		//for petlja kroz listu fajlova i za svaki uradi readOneFile
+		//list <entity> lista , u svakom foru spojis liste appendujes sa listom koju vrati readonefile
+		return null;
+	}
+	
+	
+	private List<Entity> readOneFile() throws IOException {
+		//read from currFileName
 		List<Entity> entities = new ArrayList<Entity>();
 
 		FileReader reader = null;
 		try {
-			reader = new FileReader(new File(fileName));
+			reader = new FileReader(new File(folderName));
 		} catch (Exception e) {
 			return null;
 		}
 		JsonElement jsonElement = gson.fromJson(reader, JsonElement.class);
 		JsonArray jsonArray = (JsonArray) jsonElement;
 		jArray = jsonArray;
-
-//		ArrayList<String> listdata = new ArrayList<String>();
-
-//		if (jArray != null) {
-//			for (int i = 0; i < jArray.size(); i++) {
-//				listdata.add(jArray.get(i).toString());
-//			}
-//		}
-
-//		for(String s : listdata) {
-//			Entity e = gson.fromJson(s, Entity.class);
-//			System.out.println(e.toString());
-//		}
 
 		for (JsonElement element : jsonArray) {
 
@@ -223,7 +190,12 @@ public class JsonStorageImplementation extends StorageSpec {
 
 	@Override
 	public Entity read(int id) throws IOException {
-
+		//prodjes kroz sve fajlove i vratis entitet
+		return null;
+	}
+	
+	private Entity readFromOneFile(int id) throws IOException {
+		//prodjes kroz sve fajlove i vratis entitet
 		Entity toReturn = null;
 		List<Entity> entities = new ArrayList<Entity>();
 		
@@ -245,19 +217,16 @@ public class JsonStorageImplementation extends StorageSpec {
 		
 		return toReturn;
 	}
-
 	@Override
-	public Entity update(Entity entity) {
-		// TODO Auto-generated method stub
-		return null;
+	public void delete(int id) throws IOException{
+		
 	}
-
-	@Override
-	public void delete(int id) throws IOException {
+	
+	private void deleteFromOneFile(int id) throws IOException {
 		
 		FileReader reader = null;
 		try {
-			reader = new FileReader(new File(fileName));
+			reader = new FileReader(new File(folderName));
 		} catch (Exception e) {
 			return;
 		}
@@ -270,7 +239,7 @@ public class JsonStorageImplementation extends StorageSpec {
 			JsonPrimitive jp = object.getAsJsonPrimitive("id");
 			if(jp.getAsInt() == id) {
 				jsonArray.remove(element);
-				FileWriter fw = new FileWriter(new File(fileName));
+				FileWriter fw = new FileWriter(new File(folderName));
 				fw.write(beautifyJson(jsonArray.toString()));
 				fw.close();
 				return;
@@ -293,7 +262,7 @@ public class JsonStorageImplementation extends StorageSpec {
 								if (attributeKey1.toString().equals("id")) {
 									if(attributeValue1.getAsInt() == id) {
 										ar.remove(e);
-										FileWriter fw = new FileWriter(new File(fileName));
+										FileWriter fw = new FileWriter(new File(folderName));
 										fw.write(beautifyJson(jsonArray.toString()));
 										fw.close();
 										return;
@@ -358,6 +327,14 @@ public class JsonStorageImplementation extends StorageSpec {
 		ObjectMapper mapper = new ObjectMapper();
 		Object obj = mapper.readValue(json, Object.class);
 		return mapper.writerWithDefaultPrettyPrinter().writeValueAsString(obj);
+	}
+
+	@Override
+	public void runDB(String fileName) {
+		// TODO Auto-generated method stub
+		//proveri da li se ime foldera zavrsava sa .json
+		//pokreni loadUsedIDS
+		//set currFileName ako je prazan napravi novi, ako ne dodaj bilo koji
 	}
 
 }

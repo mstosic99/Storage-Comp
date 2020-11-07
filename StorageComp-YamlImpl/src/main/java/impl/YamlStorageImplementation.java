@@ -32,11 +32,6 @@ public class YamlStorageImplementation extends StorageSpec {
 		return null;
 	}
 
-	@Override
-	public Entity update(Entity entity) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	@Override
 	public void delete(int[] ids) {
@@ -52,6 +47,12 @@ public class YamlStorageImplementation extends StorageSpec {
 
 	@Override
 	public void delete(int id) throws IOException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void runDB(String fileName) {
 		// TODO Auto-generated method stub
 		
 	}

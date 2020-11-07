@@ -40,6 +40,7 @@ public class Entity {
 		usedIDs.add(this.id);
 
 	}
+	
 
 	public Entity(int id, String naziv, Map<String, String> properties, Map<String, List<Entity>> subEntities) {
 
@@ -58,6 +59,7 @@ public class Entity {
 
 	}
 
+		
 	public void setProperties(Map<String, String> properties) {
 		this.properties = properties;
 	}
@@ -73,6 +75,7 @@ public class Entity {
 	public void addSubEntity(String key, List<Entity> value) {
 		subEntities.put(key, value);
 	}
+	
 
 	// Nije human-readable (String)
 //	private void generateAndSetID() {

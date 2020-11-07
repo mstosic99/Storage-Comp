@@ -15,7 +15,7 @@ public class test {
 //		filePath = filePath.substring(0, filePath.length() - 21); // Uzasna linija pls ignore hahahh
 		filePath += "\\src\\test\\resources\\test1.json";
 		
-		ImplementorManager.registerImplementor(new JsonStorageImplementation(filePath));
+		
 		
 		StorageSpec ss = ImplementorManager.getStorageSpec();
 		

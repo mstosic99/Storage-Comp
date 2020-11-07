@@ -1,101 +1,126 @@
-[ {
-  "naziv" : "student",
-  "id" : 3,
-  "ime" : "Pera",
-  "prezime" : "Peric",
-  "jmbg" : "2308993548392",
-  "email" : "peraperic@gmail.com",
-  "adresa" : [ {
-    "naziv" : "Vule Antica",
-    "id" : 2,
-    "broj" : "35",
-    "neki podatak" : "ja sam taj podatak"
-  } ],
-  "prijatelji" : [ {
-    "naziv" : "Mixa",
-    "id" : 0,
-    "nesto" : "neko",
-    "age" : "25"
-  }, {
-    "naziv" : "Sone",
-    "id" : 1,
-    "jmbg" : "24356345634345",
-    "nesto" : "sta bre",
-    "age" : "37"
-  } ]
-}, {
-  "naziv" : "osoba",
-  "id" : 7,
-  "ime" : "Djoka",
-  "prezime" : "Djokic",
-  "jmbg" : "23082345648392",
-  "email" : "djokadjokic@gmail.com",
-  "adresa" : [ {
-    "naziv" : "Dr kopse",
-    "id" : 6,
-    "broj" : "35",
-    "neki podatak" : "ja sam taj podatak"
-  } ],
-  "prijatelji" : [ {
-    "naziv" : "Zika",
-    "id" : 4,
-    "nesto" : "dsfgsdfg",
-    "age" : "53"
-  }, {
-    "naziv" : "Neko",
-    "id" : 5,
-    "jmbg" : "243563453472345",
-    "nesto" : "ddeqwerdc",
-    "age" : "1"
-  } ]
-}, {
-  "naziv" : "student",
-  "id" : 11,
-  "ime" : "Pera",
-  "prezime" : "Peric",
-  "jmbg" : "2308993548392",
-  "email" : "peraperic@gmail.com",
-  "adresa" : [ {
-    "naziv" : "Vule Antica",
-    "id" : 10,
-    "broj" : "35",
-    "neki podatak" : "ja sam taj podatak"
-  } ],
-  "prijatelji" : [ {
-    "naziv" : "Mixa",
-    "id" : 8,
-    "nesto" : "neko",
-    "age" : "25"
-  }, {
-    "naziv" : "Sone",
-    "id" : 9,
-    "jmbg" : "24356345634345",
-    "nesto" : "sta bre",
-    "age" : "37"
-  } ]
-}, {
-  "naziv" : "osoba",
-  "id" : 15,
-  "ime" : "Djoka",
-  "prezime" : "Djokic",
-  "jmbg" : "23082345648392",
-  "email" : "djokadjokic@gmail.com",
-  "adresa" : [ {
-    "naziv" : "Dr kopse",
-    "id" : 14,
-    "broj" : "35",
-    "neki podatak" : "ja sam taj podatak"
-  } ],
-  "prijatelji" : [ {
-    "naziv" : "Zika",
-    "id" : 12,
-    "nesto" : "dsfgsdfg",
-    "age" : "53"
-  }, {
-    "naziv" : "Neko",
-    "id" : 13,
-    "jmbg" : "243563453472345",
-    "nesto" : "ddeqwerdc",
-    "age" : "1"
-  } ]
-} ]
+[
+	{
+		"naziv": "student",
+		"id": 3,
+		"ime": "Pera",
+		"prezime": "Peric",
+		"jmbg": "2308993548392",
+		"email": "peraperic@gmail.com",
+		"adresa": [
+			{
+				"naziv": "Vule Antica",
+				"id": 2,
+				"broj": "35",
+				"neki podatak": "ja sam taj podatak"
+			}
+		],
+		"prijatelji": [
+			{
+				"naziv": "Mixa",
+				"id": 0,
+				"nesto": "neko",
+				"age": "25"
+			},
+			{
+				"naziv": "Sone",
+				"id": 1,
+				"jmbg": "24356345634345",
+				"nesto": "sta bre",
+				"age": "37"
+			}
+		]
+	},
+	{
+		"naziv": "osoba",
+		"id": 7,
+		"ime": "Djoka",
+		"prezime": "Djokic",
+		"jmbg": "23082345648392",
+		"email": "djokadjokic@gmail.com",
+		"adresa": [
+			{
+				"naziv": "Dr kopse",
+				"id": 6,
+				"broj": "35",
+				"neki podatak": "ja sam taj podatak"
+			}
+		],
+		"prijatelji": [
+			{
+				"naziv": "Zika",
+				"id": 4,
+				"nesto": "dsfgsdfg",
+				"age": "53"
+			},
+			{
+				"naziv": "Neko",
+				"id": 5,
+				"jmbg": "243563453472345",
+				"nesto": "ddeqwerdc",
+				"age": "1"
+			}
+		]
+	},
+	{
+		"naziv": "student",
+		"id": 11,
+		"ime": "Pera",
+		"prezime": "Peric",
+		"jmbg": "2308993548392",
+		"email": "peraperic@gmail.com",
+		"adresa": [
+			{
+				"naziv": "Vule Antica",
+				"id": 10,
+				"broj": "35",
+				"neki podatak": "ja sam taj podatak"
+			}
+		],
+		"prijatelji": [
+			{
+				"naziv": "Mixa",
+				"id": 8,
+				"nesto": "neko",
+				"age": "25"
+			},
+			{
+				"naziv": "Sone",
+				"id": 9,
+				"jmbg": "24356345634345",
+				"nesto": "sta bre",
+				"age": "37"
+			}
+		]
+	},
+	{
+		"naziv": "osoba",
+		"id": 15,
+		"ime": "Djoka",
+		"prezime": "Djokic",
+		"jmbg": "23082345648392",
+		"email": "djokadjokic@gmail.com",
+		"adresa": [
+			{
+				"naziv": "Dr kopse",
+				"id": 14,
+				"broj": "35",
+				"neki podatak": "ja sam taj podatak"
+			}
+		],
+		"prijatelji": [
+			{
+				"naziv": "Zika",
+				"id": 12,
+				"nesto": "dsfgsdfg",
+				"age": "53"
+			},
+			{
+				"naziv": "Neko",
+				"id": 13,
+				"jmbg": "243563453472345",
+				"nesto": "ddeqwerdc",
+				"age": "1"
+			}
+		]
+	}
+]

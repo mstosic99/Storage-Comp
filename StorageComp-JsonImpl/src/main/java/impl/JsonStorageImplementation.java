@@ -24,6 +24,7 @@ public class JsonStorageImplementation extends StorageSpec {
 
 	private Gson gson = new Gson();
 	private JsonArray jArray = new JsonArray();
+	private static int fileCount = 0;
 
 	public JsonStorageImplementation() {
 		
@@ -34,18 +35,27 @@ public class JsonStorageImplementation extends StorageSpec {
 	public void save(Entity entity) {
 		//ako u currFile ima preko 50 entiteta napravi novi fajl
 		
+		int count=0;
+		
 		FileWriter fileWriter;
 		
 		try {
 
 			try {
 				FileReader fr = new FileReader(new File(folderName));
-				readAll(); // Pre svega ucitavamo postojece podatke iz json fajla (ako ne postoji fajl,
-							// znaci da jos nije kreiran, pa se nista ne desava
+				count = readAll().size(); 		// Pre svega ucitavamo postojece podatke iz json fajla (ako ne postoji fajl,
+												// znaci da jos nije kreiran, pa se nista ne desava
 				fr.close();
 			} catch (IOException e) {
 			}
-
+			
+			if(count >= cap) {
+				File newFile = new File("test" + fileCount++ + ".json");
+				currFileName = newFile.getAbsolutePath();
+				
+				
+			}
+			
 			fileWriter = new FileWriter(new File(folderName));
 
 			JsonObject object = new JsonObject();
@@ -107,7 +117,28 @@ public class JsonStorageImplementation extends StorageSpec {
 		//lista fajlova = FILE.FINDFILES (.json)
 		//for petlja kroz listu fajlova i za svaki uradi readOneFile
 		//list <entity> lista , u svakom foru spojis liste appendujes sa listom koju vrati readonefile
-		return null;
+		
+		List<Entity> toReturn = new ArrayList<>();
+		
+		StringBuilder currFileBuffer = new StringBuilder(currFileName);
+		File dir = new File(folderName);
+		File[] files = dir.listFiles();
+		if(files.length != 0) {
+			for(File file : files) {
+				if(file.getAbsolutePath().endsWith(".json")) {
+					currFileName = file.getAbsolutePath();
+					List<Entity> lista = readOneFile();
+					if(lista != null) {
+						toReturn.addAll(lista);
+					}
+				}
+			}
+		}
+		currFileName = currFileBuffer.toString();
+		
+		
+		
+		return toReturn;
 	}
 	
 	
@@ -190,11 +221,26 @@ public class JsonStorageImplementation extends StorageSpec {
 
 	@Override
 	public Entity read(int id) throws IOException {
-		//prodjes kroz sve fajlove i vratis entitet
-		return null;
+		
+		Entity toReturn = null;
+		
+		StringBuilder currFileBuffer = new StringBuilder(currFileName);
+		File dir = new File(folderName);
+		File[] files = dir.listFiles();
+		if(files.length != 0) {
+			for(File file : files) {
+				if(file.getAbsolutePath().endsWith(".json")) {
+					currFileName = file.getAbsolutePath();
+					toReturn  = readFromOneFileById(id);
+				}
+			}
+		}
+		currFileName = currFileBuffer.toString();
+		
+		return toReturn;
 	}
 	
-	private Entity readFromOneFile(int id) throws IOException {
+	private Entity readFromOneFileById(int id) throws IOException {
 		//prodjes kroz sve fajlove i vratis entitet
 		Entity toReturn = null;
 		List<Entity> entities = new ArrayList<Entity>();
@@ -212,13 +258,23 @@ public class JsonStorageImplementation extends StorageSpec {
 				
 		}
 		
-		if(toReturn == null)
-			System.err.println("Id "+ id +" ne postoji.");
-		
 		return toReturn;
 	}
 	@Override
 	public void delete(int id) throws IOException{
+		
+		StringBuilder currFileBuffer = new StringBuilder(currFileName);
+		File dir = new File(folderName);
+		File[] files = dir.listFiles();
+		if(files.length != 0) {
+			for(File file : files) {
+				if(file.getAbsolutePath().endsWith(".json")) {
+					currFileName = file.getAbsolutePath();
+					deleteFromOneFile(id);
+				}
+			}
+		}
+		currFileName = currFileBuffer.toString();
 		
 	}
 	
@@ -226,7 +282,7 @@ public class JsonStorageImplementation extends StorageSpec {
 		
 		FileReader reader = null;
 		try {
-			reader = new FileReader(new File(folderName));
+			reader = new FileReader(new File(currFileName));
 		} catch (Exception e) {
 			return;
 		}
@@ -330,11 +386,26 @@ public class JsonStorageImplementation extends StorageSpec {
 	}
 
 	@Override
-	public void runDB(String fileName) {
-		// TODO Auto-generated method stub
+	public void runDB(String folderName) throws Exception {
 		//proveri da li se ime foldera zavrsava sa .json
 		//pokreni loadUsedIDS
 		//set currFileName ako je prazan napravi novi, ako ne dodaj bilo koji
+		
+		File dir = new File(folderName);
+		if(!dir.isDirectory() || !dir.getName().endsWith(".json"))
+			throw new IllegalArgumentException();
+				
+		if(dir.listFiles().length == 0) {
+			File file = new File("test" + fileCount++ + ".json");
+			currFileName = file.getAbsolutePath();
+		} else {
+			File[] files = dir.listFiles();
+			currFileName = files[files.length-1].getAbsolutePath();
+		}
+		
+		loadUsedIDs();
+		
 	}
+	
 
 }

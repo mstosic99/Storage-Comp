@@ -17,7 +17,7 @@ public abstract class StorageSpec {
 	
 	private boolean isAutoIncrement; // TODO mogucnost izbora
 	
-	public abstract void runDB(String fileName); //unutar implementacije proveriti da li se file zavrsava (.xxxx) sa dobrim nastavkom 
+	public abstract void runDB(String fileName) throws Exception; //unutar implementacije proveriti da li se file zavrsava (.xxxx) sa dobrim nastavkom 
 	//
 	
 	public abstract void save(Entity entity) throws IOException;
@@ -124,7 +124,7 @@ public abstract class StorageSpec {
 	}
 	
 	
-	public void setFolderNameAndStart(String folderName) {
+	public void setFolderNameAndStart(String folderName) throws Exception {
 		this.folderName = folderName;
 		runDB(folderName);
 	}

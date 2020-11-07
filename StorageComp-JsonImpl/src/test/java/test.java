@@ -11,12 +11,13 @@ public class test {
 
 	public static void main(String[] args) {
 		
-		ImplementorManager.registerImplementor(new JsonStorageImplementation());
-		
 		String filePath = new File("").getAbsolutePath();
 		filePath = filePath.substring(0, filePath.length() - 21); // Uzasna linija pls ignore hahahh
 		filePath += "\\data\\test1.json";
-		StorageSpec ss = ImplementorManager.getStorageSpec(filePath);
+		
+		ImplementorManager.registerImplementor(new JsonStorageImplementation(filePath));
+		
+		StorageSpec ss = ImplementorManager.getStorageSpec();
 		
 		//***************************************************************************
 		Map<String, String> properties = new HashMap<>();
@@ -86,11 +87,13 @@ public class test {
 		
 		Entity finalEntity2 = new Entity("osoba", properties2, subEntitiesPack2);
 		
-		System.out.println("123412341234"+finalEntity1.toString());
 		try {
-			ss.save(finalEntity1);
-			ss.save(finalEntity2);
+//			ss.save(finalEntity1);				// testovi
+//			ss.save(finalEntity2);
 //			System.out.println(ss.readAll().toString());
+			int[] a = {1,5,8};
+			System.out.println("FROM READ "+ss.read(a).toString());
+			ss.delete(7);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

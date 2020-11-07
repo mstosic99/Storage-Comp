@@ -35,11 +35,15 @@ public abstract class StorageSpec {
 	
 	public abstract List<Entity> readAll() throws IOException;				// Ucitaj sve entitete
 	
-	public abstract List<Entity> read(int[] ids);  		// Ucitaj entitete za id
+	public abstract Entity read(int id) throws IOException;
+	
+	public abstract List<Entity> read(int[] ids) throws IOException;  		// Ucitaj entitete za id
 	
 	public abstract Entity update(Entity entity);
 	
-	public abstract void delete(int[] ids);
+	public abstract void delete(int[] ids) throws IOException;
+	
+	public abstract void delete(int id) throws IOException;
 		
 	
 	

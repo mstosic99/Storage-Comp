@@ -3,15 +3,14 @@ package api;
 
 public class ImplementorManager {
 
-private static StorageSpec storageSpec;
+	private static StorageSpec storageSpec;
 	
 	public static void registerImplementor(StorageSpec spec) {
-		storageSpec = spec;		
+		storageSpec = spec;	
 	}
 	
-	public static StorageSpec getStorageSpec(String fileName) {
-		storageSpec.setFileName(fileName);
+	public static StorageSpec getStorageSpec() {
 		return storageSpec;
 	}
-	
+		
 }

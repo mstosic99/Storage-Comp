@@ -1,5 +1,6 @@
 package impl;
 
+import java.io.IOException;
 import java.util.List;
 
 import api.StorageSpec;
@@ -39,6 +40,18 @@ public class YamlStorageImplementation extends StorageSpec {
 
 	@Override
 	public void delete(int[] ids) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Entity read(int id) throws IOException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void delete(int id) throws IOException {
 		// TODO Auto-generated method stub
 		
 	}

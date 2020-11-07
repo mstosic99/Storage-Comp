@@ -12,8 +12,8 @@ public class test {
 	public static void main(String[] args) {
 		
 		String filePath = new File("").getAbsolutePath();
-		filePath = filePath.substring(0, filePath.length() - 21); // Uzasna linija pls ignore hahahh
-		filePath += "\\data\\test1.json";
+//		filePath = filePath.substring(0, filePath.length() - 21); // Uzasna linija pls ignore hahahh
+		filePath += "\\src\\test\\resources\\test1.json";
 		
 		ImplementorManager.registerImplementor(new JsonStorageImplementation(filePath));
 		
@@ -88,12 +88,12 @@ public class test {
 		Entity finalEntity2 = new Entity("osoba", properties2, subEntitiesPack2);
 		
 		try {
-//			ss.save(finalEntity1);				// testovi
-//			ss.save(finalEntity2);
+			ss.save(finalEntity1);				// testovi
+			ss.save(finalEntity2);
 //			System.out.println(ss.readAll().toString());
-			int[] a = {1,5,8};
-			System.out.println("FROM READ "+ss.read(a).toString());
-			ss.delete(7);
+//			int[] a = {1,5,8};
+//			System.out.println("FROM READ "+ss.read(a).toString());
+//			ss.delete(7);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

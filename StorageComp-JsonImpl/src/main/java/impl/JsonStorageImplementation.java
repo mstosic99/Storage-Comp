@@ -20,8 +20,8 @@ public class JsonStorageImplementation extends StorageSpec {
 
 	static {
 		String filePath = new File("").getAbsolutePath();
-		filePath = filePath.substring(0, filePath.length() - 21); // Uzasna linija pls ignore hahahh
-		filePath += "\\data\\test1.json";
+//		filePath = filePath.substring(0, filePath.length() - 21); // Uzasna linija pls ignore hahahh
+		filePath += "\\src\\test\\resources\\test1.json";
 		ImplementorManager.registerImplementor(new JsonStorageImplementation(filePath));
 	}
 

@@ -26,11 +26,17 @@
 			<groupId>SoftComp</groupId>
 			<artifactId>StorageComp-API</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
+<<<<<<< Updated upstream
 			<!-- 
 			<scope>system</scope>
 			<systemPath>${project.basedir}/lib/StorageComp-API.jar</systemPath> 
 			-->
 			
+=======
+			<!--
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/StorageComp-API.jar</systemPath> -->
+>>>>>>> Stashed changes
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->

@@ -23,12 +23,9 @@ public abstract class StorageSpec {
 	
 	private boolean isAutoIncrement;
 	
-<<<<<<< Updated upstream
-	public abstract void runDB(String fileName) throws Exception; //unutar implementacije proveriti da li se file zavrsava (.xxxx) sa dobrim nastavkom 
-	//
-=======
+
 	public abstract void runDB(String fileName) throws Exception; 
->>>>>>> Stashed changes
+
 	
 	public abstract void save(Entity entity) throws IOException;
 	

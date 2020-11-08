@@ -25,11 +25,6 @@ public class JsonStorageImplementation extends StorageSpec {
 	private Gson gson = new Gson();
 	private JsonArray jArray = new JsonArray();
 	
-
-	public JsonStorageImplementation() {
-		
-	}
-	
 	
 	@Override
 	public void save(Entity entity) {
@@ -45,7 +40,7 @@ public class JsonStorageImplementation extends StorageSpec {
 			try {
 				FileReader fr = new FileReader(new File(currFileName));
 				
-				count = readOneFile().size();
+				count = readCurrFile().size();
 //				readOneFile(); 		// Pre svega ucitavamo postojece podatke iz json fajla (ako ne postoji fajl,
 												// znaci da jos nije kreiran, pa se nista ne desava
 				fr.close();
@@ -138,7 +133,7 @@ public class JsonStorageImplementation extends StorageSpec {
 			for(File file : files) {
 				if(file.getAbsolutePath().endsWith(".json")) {
 					currFileName = file.getAbsolutePath();
-					List<Entity> lista = readOneFile();
+					List<Entity> lista = readCurrFile();
 					if(lista != null) {
 						toReturn.addAll(lista);
 					}
@@ -153,7 +148,7 @@ public class JsonStorageImplementation extends StorageSpec {
 	}
 	
 	
-	private List<Entity> readOneFile() throws IOException {
+	private List<Entity> readCurrFile() throws IOException {
 		//read from currFileName
 
 		

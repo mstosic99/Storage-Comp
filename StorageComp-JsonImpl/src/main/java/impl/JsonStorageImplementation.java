@@ -24,7 +24,7 @@ public class JsonStorageImplementation extends StorageSpec {
 
 	private Gson gson = new Gson();
 	private JsonArray jArray = new JsonArray();
-	private static int fileCount = 0;
+	
 
 	public JsonStorageImplementation() {
 		
@@ -37,26 +37,33 @@ public class JsonStorageImplementation extends StorageSpec {
 		
 		int count=0;
 		
+		
 		FileWriter fileWriter;
 		
 		try {
 
 			try {
-				FileReader fr = new FileReader(new File(folderName));
-				count = readAll().size(); 		// Pre svega ucitavamo postojece podatke iz json fajla (ako ne postoji fajl,
+				FileReader fr = new FileReader(new File(currFileName));
+				
+				count = readOneFile().size();
+//				readOneFile(); 		// Pre svega ucitavamo postojece podatke iz json fajla (ako ne postoji fajl,
 												// znaci da jos nije kreiran, pa se nista ne desava
 				fr.close();
 			} catch (IOException e) {
 			}
 			
 			if(count >= cap) {
-				File newFile = new File("test" + fileCount++ + ".json");
+				File dir = new File(folderName);
+				int fileCount = dir.listFiles().length + 1;
+				if(!dir.isDirectory() || !dir.getName().endsWith(".json"))
+					throw new IllegalArgumentException();
+				File newFile = new File(dir.getAbsolutePath()+"\\test" + fileCount + ".json");
 				currFileName = newFile.getAbsolutePath();
-				
+				jArray = new JsonArray();
 				
 			}
-			
-			fileWriter = new FileWriter(new File(folderName));
+
+			fileWriter = new FileWriter(new File(currFileName));
 
 			JsonObject object = new JsonObject();
 
@@ -97,6 +104,10 @@ public class JsonStorageImplementation extends StorageSpec {
 
 			fileWriter.write(beautifyJson(jArray.toString()));
 			fileWriter.close();
+			
+			System.out.println(count);
+
+			
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -144,11 +155,13 @@ public class JsonStorageImplementation extends StorageSpec {
 	
 	private List<Entity> readOneFile() throws IOException {
 		//read from currFileName
+
+		
 		List<Entity> entities = new ArrayList<Entity>();
 
 		FileReader reader = null;
 		try {
-			reader = new FileReader(new File(folderName));
+			reader = new FileReader(new File(currFileName));
 		} catch (Exception e) {
 			return null;
 		}
@@ -295,7 +308,7 @@ public class JsonStorageImplementation extends StorageSpec {
 			JsonPrimitive jp = object.getAsJsonPrimitive("id");
 			if(jp.getAsInt() == id) {
 				jsonArray.remove(element);
-				FileWriter fw = new FileWriter(new File(folderName));
+				FileWriter fw = new FileWriter(new File(currFileName));
 				fw.write(beautifyJson(jsonArray.toString()));
 				fw.close();
 				return;
@@ -318,7 +331,7 @@ public class JsonStorageImplementation extends StorageSpec {
 								if (attributeKey1.toString().equals("id")) {
 									if(attributeValue1.getAsInt() == id) {
 										ar.remove(e);
-										FileWriter fw = new FileWriter(new File(folderName));
+										FileWriter fw = new FileWriter(new File(currFileName));
 										fw.write(beautifyJson(jsonArray.toString()));
 										fw.close();
 										return;
@@ -392,11 +405,19 @@ public class JsonStorageImplementation extends StorageSpec {
 		//set currFileName ako je prazan napravi novi, ako ne dodaj bilo koji
 		
 		File dir = new File(folderName);
-		if(!dir.isDirectory() || !dir.getName().endsWith(".json"))
-			throw new IllegalArgumentException();
+		try {
+		
+			if(!dir.isDirectory() || !dir.getName().endsWith(".json"))
+				throw new IllegalArgumentException();
+		} catch (IllegalArgumentException e) {
+			System.err.println("Ubacili ste pogresan JAR, RUNTIME DEPENDENCY FAILED");
+			System.exit(0);
+		}
+		
 				
 		if(dir.listFiles().length == 0) {
-			File file = new File("test" + fileCount++ + ".json");
+			int fileCount = dir.listFiles().length + 1;
+			File file = new File(dir.getAbsolutePath()+"\\test" + fileCount + ".json");
 			currFileName = file.getAbsolutePath();
 		} else {
 			File[] files = dir.listFiles();

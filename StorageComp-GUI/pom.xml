@@ -1,13 +1,3 @@
-<<<<<<< Updated upstream
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>SoftComp</groupId>
-  <artifactId>StorageComp-GUI</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>StorageComp-GUI</name>
-  
-  
-=======
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -16,16 +6,29 @@
 	<artifactId>StorageComp-GUI</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>StorageComp-GUI</name>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>11</maven.compiler.source>
+		<maven.compiler.target>11</maven.compiler.target>
+	</properties>
+	
 	<dependencies>
+		<dependency>
+			<groupId>SoftComp</groupId>
+			<artifactId>StorageComp-JsonImpl</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+
+			<scope>runtime</scope>
+		</dependency>
+
+
 		<dependency>
 			<groupId>SoftComp</groupId>
 			<artifactId>StorageComp-API</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 
 			<scope>system</scope>
-			<systemPath>${project.basedir}/lib/StorageComp-JsonImpl.jar</systemPath>
+			<systemPath>${project.basedir}/lib/StorageComp-API.jar</systemPath> 
 		</dependency>
 	</dependencies>
-
->>>>>>> Stashed changes
 </project>

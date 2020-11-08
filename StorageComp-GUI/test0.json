@@ -1,0 +1,1151 @@
+[ {
+  "naziv" : "student",
+  "id" : 3,
+  "ime" : "Pera",
+  "prezime" : "Peric",
+  "jmbg" : "2308993548392",
+  "email" : "peraperic@gmail.com",
+  "adresa" : [ ],
+  "prijatelji" : [ {
+    "naziv" : "Mixa",
+    "id" : 0,
+    "nesto" : "neko",
+    "age" : "25"
+  }, {
+    "naziv" : "Sone",
+    "id" : 1,
+    "jmbg" : "24356345634345",
+    "nesto" : "sta bre",
+    "age" : "37"
+  } ]
+}, {
+  "naziv" : "osoba",
+  "id" : 7,
+  "ime" : "Djoka",
+  "prezime" : "Djokic",
+  "jmbg" : "23082345648392",
+  "email" : "djokadjokic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Dr kopse",
+    "id" : 6,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Zika",
+    "id" : 4,
+    "nesto" : "dsfgsdfg",
+    "age" : "53"
+  }, {
+    "naziv" : "Neko",
+    "id" : 5,
+    "jmbg" : "243563453472345",
+    "nesto" : "ddeqwerdc",
+    "age" : "1"
+  } ]
+}, {
+  "naziv" : "student",
+  "id" : 10,
+  "ime" : "Pera",
+  "prezime" : "Peric",
+  "jmbg" : "2308993548392",
+  "email" : "peraperic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Vule Antica",
+    "id" : 9,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Sone",
+    "id" : 8,
+    "jmbg" : "24356345634345",
+    "nesto" : "sta bre",
+    "age" : "37"
+  } ]
+}, {
+  "naziv" : "osoba",
+  "id" : 14,
+  "ime" : "Djoka",
+  "prezime" : "Djokic",
+  "jmbg" : "23082345648392",
+  "email" : "djokadjokic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Dr kopse",
+    "id" : 13,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Zika",
+    "id" : 11,
+    "nesto" : "dsfgsdfg",
+    "age" : "53"
+  }, {
+    "naziv" : "Neko",
+    "id" : 12,
+    "jmbg" : "243563453472345",
+    "nesto" : "ddeqwerdc",
+    "age" : "1"
+  } ]
+}, {
+  "naziv" : "student",
+  "id" : 17,
+  "ime" : "Pera",
+  "prezime" : "Peric",
+  "jmbg" : "2308993548392",
+  "email" : "peraperic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Vule Antica",
+    "id" : 16,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Sone",
+    "id" : 15,
+    "jmbg" : "24356345634345",
+    "nesto" : "sta bre",
+    "age" : "37"
+  } ]
+}, {
+  "naziv" : "osoba",
+  "id" : 21,
+  "ime" : "Djoka",
+  "prezime" : "Djokic",
+  "jmbg" : "23082345648392",
+  "email" : "djokadjokic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Dr kopse",
+    "id" : 20,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Zika",
+    "id" : 18,
+    "nesto" : "dsfgsdfg",
+    "age" : "53"
+  }, {
+    "naziv" : "Neko",
+    "id" : 19,
+    "jmbg" : "243563453472345",
+    "nesto" : "ddeqwerdc",
+    "age" : "1"
+  } ]
+}, {
+  "naziv" : "student",
+  "id" : 24,
+  "ime" : "Pera",
+  "prezime" : "Peric",
+  "jmbg" : "2308993548392",
+  "email" : "peraperic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Vule Antica",
+    "id" : 23,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Sone",
+    "id" : 22,
+    "jmbg" : "24356345634345",
+    "nesto" : "sta bre",
+    "age" : "37"
+  } ]
+}, {
+  "naziv" : "osoba",
+  "id" : 28,
+  "ime" : "Djoka",
+  "prezime" : "Djokic",
+  "jmbg" : "23082345648392",
+  "email" : "djokadjokic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Dr kopse",
+    "id" : 27,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Zika",
+    "id" : 25,
+    "nesto" : "dsfgsdfg",
+    "age" : "53"
+  }, {
+    "naziv" : "Neko",
+    "id" : 26,
+    "jmbg" : "243563453472345",
+    "nesto" : "ddeqwerdc",
+    "age" : "1"
+  } ]
+}, {
+  "naziv" : "student",
+  "id" : 31,
+  "ime" : "Pera",
+  "prezime" : "Peric",
+  "jmbg" : "2308993548392",
+  "email" : "peraperic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Vule Antica",
+    "id" : 30,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Sone",
+    "id" : 29,
+    "jmbg" : "24356345634345",
+    "nesto" : "sta bre",
+    "age" : "37"
+  } ]
+}, {
+  "naziv" : "osoba",
+  "id" : 35,
+  "ime" : "Djoka",
+  "prezime" : "Djokic",
+  "jmbg" : "23082345648392",
+  "email" : "djokadjokic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Dr kopse",
+    "id" : 34,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Zika",
+    "id" : 32,
+    "nesto" : "dsfgsdfg",
+    "age" : "53"
+  }, {
+    "naziv" : "Neko",
+    "id" : 33,
+    "jmbg" : "243563453472345",
+    "nesto" : "ddeqwerdc",
+    "age" : "1"
+  } ]
+}, {
+  "naziv" : "student",
+  "id" : 38,
+  "ime" : "Pera",
+  "prezime" : "Peric",
+  "jmbg" : "2308993548392",
+  "email" : "peraperic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Vule Antica",
+    "id" : 37,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Sone",
+    "id" : 36,
+    "jmbg" : "24356345634345",
+    "nesto" : "sta bre",
+    "age" : "37"
+  } ]
+}, {
+  "naziv" : "osoba",
+  "id" : 42,
+  "ime" : "Djoka",
+  "prezime" : "Djokic",
+  "jmbg" : "23082345648392",
+  "email" : "djokadjokic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Dr kopse",
+    "id" : 41,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Zika",
+    "id" : 39,
+    "nesto" : "dsfgsdfg",
+    "age" : "53"
+  }, {
+    "naziv" : "Neko",
+    "id" : 40,
+    "jmbg" : "243563453472345",
+    "nesto" : "ddeqwerdc",
+    "age" : "1"
+  } ]
+}, {
+  "naziv" : "student",
+  "id" : 45,
+  "ime" : "Pera",
+  "prezime" : "Peric",
+  "jmbg" : "2308993548392",
+  "email" : "peraperic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Vule Antica",
+    "id" : 44,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Sone",
+    "id" : 43,
+    "jmbg" : "24356345634345",
+    "nesto" : "sta bre",
+    "age" : "37"
+  } ]
+}, {
+  "naziv" : "osoba",
+  "id" : 49,
+  "ime" : "Djoka",
+  "prezime" : "Djokic",
+  "jmbg" : "23082345648392",
+  "email" : "djokadjokic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Dr kopse",
+    "id" : 48,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Zika",
+    "id" : 46,
+    "nesto" : "dsfgsdfg",
+    "age" : "53"
+  }, {
+    "naziv" : "Neko",
+    "id" : 47,
+    "jmbg" : "243563453472345",
+    "nesto" : "ddeqwerdc",
+    "age" : "1"
+  } ]
+}, {
+  "naziv" : "student",
+  "id" : 52,
+  "ime" : "Pera",
+  "prezime" : "Peric",
+  "jmbg" : "2308993548392",
+  "email" : "peraperic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Vule Antica",
+    "id" : 51,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Sone",
+    "id" : 50,
+    "jmbg" : "24356345634345",
+    "nesto" : "sta bre",
+    "age" : "37"
+  } ]
+}, {
+  "naziv" : "osoba",
+  "id" : 56,
+  "ime" : "Djoka",
+  "prezime" : "Djokic",
+  "jmbg" : "23082345648392",
+  "email" : "djokadjokic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Dr kopse",
+    "id" : 55,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Zika",
+    "id" : 53,
+    "nesto" : "dsfgsdfg",
+    "age" : "53"
+  }, {
+    "naziv" : "Neko",
+    "id" : 54,
+    "jmbg" : "243563453472345",
+    "nesto" : "ddeqwerdc",
+    "age" : "1"
+  } ]
+}, {
+  "naziv" : "student",
+  "id" : 59,
+  "ime" : "Pera",
+  "prezime" : "Peric",
+  "jmbg" : "2308993548392",
+  "email" : "peraperic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Vule Antica",
+    "id" : 58,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Sone",
+    "id" : 57,
+    "jmbg" : "24356345634345",
+    "nesto" : "sta bre",
+    "age" : "37"
+  } ]
+}, {
+  "naziv" : "osoba",
+  "id" : 63,
+  "ime" : "Djoka",
+  "prezime" : "Djokic",
+  "jmbg" : "23082345648392",
+  "email" : "djokadjokic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Dr kopse",
+    "id" : 62,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Zika",
+    "id" : 60,
+    "nesto" : "dsfgsdfg",
+    "age" : "53"
+  }, {
+    "naziv" : "Neko",
+    "id" : 61,
+    "jmbg" : "243563453472345",
+    "nesto" : "ddeqwerdc",
+    "age" : "1"
+  } ]
+}, {
+  "naziv" : "student",
+  "id" : 66,
+  "ime" : "Pera",
+  "prezime" : "Peric",
+  "jmbg" : "2308993548392",
+  "email" : "peraperic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Vule Antica",
+    "id" : 65,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Sone",
+    "id" : 64,
+    "jmbg" : "24356345634345",
+    "nesto" : "sta bre",
+    "age" : "37"
+  } ]
+}, {
+  "naziv" : "osoba",
+  "id" : 70,
+  "ime" : "Djoka",
+  "prezime" : "Djokic",
+  "jmbg" : "23082345648392",
+  "email" : "djokadjokic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Dr kopse",
+    "id" : 69,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Zika",
+    "id" : 67,
+    "nesto" : "dsfgsdfg",
+    "age" : "53"
+  }, {
+    "naziv" : "Neko",
+    "id" : 68,
+    "jmbg" : "243563453472345",
+    "nesto" : "ddeqwerdc",
+    "age" : "1"
+  } ]
+}, {
+  "naziv" : "student",
+  "id" : 73,
+  "ime" : "Pera",
+  "prezime" : "Peric",
+  "jmbg" : "2308993548392",
+  "email" : "peraperic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Vule Antica",
+    "id" : 72,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Sone",
+    "id" : 71,
+    "jmbg" : "24356345634345",
+    "nesto" : "sta bre",
+    "age" : "37"
+  } ]
+}, {
+  "naziv" : "osoba",
+  "id" : 77,
+  "ime" : "Djoka",
+  "prezime" : "Djokic",
+  "jmbg" : "23082345648392",
+  "email" : "djokadjokic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Dr kopse",
+    "id" : 76,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Zika",
+    "id" : 74,
+    "nesto" : "dsfgsdfg",
+    "age" : "53"
+  }, {
+    "naziv" : "Neko",
+    "id" : 75,
+    "jmbg" : "243563453472345",
+    "nesto" : "ddeqwerdc",
+    "age" : "1"
+  } ]
+}, {
+  "naziv" : "student",
+  "id" : 80,
+  "ime" : "Pera",
+  "prezime" : "Peric",
+  "jmbg" : "2308993548392",
+  "email" : "peraperic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Vule Antica",
+    "id" : 79,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Sone",
+    "id" : 78,
+    "jmbg" : "24356345634345",
+    "nesto" : "sta bre",
+    "age" : "37"
+  } ]
+}, {
+  "naziv" : "osoba",
+  "id" : 84,
+  "ime" : "Djoka",
+  "prezime" : "Djokic",
+  "jmbg" : "23082345648392",
+  "email" : "djokadjokic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Dr kopse",
+    "id" : 83,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Zika",
+    "id" : 81,
+    "nesto" : "dsfgsdfg",
+    "age" : "53"
+  }, {
+    "naziv" : "Neko",
+    "id" : 82,
+    "jmbg" : "243563453472345",
+    "nesto" : "ddeqwerdc",
+    "age" : "1"
+  } ]
+}, {
+  "naziv" : "student",
+  "id" : 87,
+  "ime" : "Pera",
+  "prezime" : "Peric",
+  "jmbg" : "2308993548392",
+  "email" : "peraperic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Vule Antica",
+    "id" : 86,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Sone",
+    "id" : 85,
+    "jmbg" : "24356345634345",
+    "nesto" : "sta bre",
+    "age" : "37"
+  } ]
+}, {
+  "naziv" : "osoba",
+  "id" : 91,
+  "ime" : "Djoka",
+  "prezime" : "Djokic",
+  "jmbg" : "23082345648392",
+  "email" : "djokadjokic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Dr kopse",
+    "id" : 90,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Zika",
+    "id" : 88,
+    "nesto" : "dsfgsdfg",
+    "age" : "53"
+  }, {
+    "naziv" : "Neko",
+    "id" : 89,
+    "jmbg" : "243563453472345",
+    "nesto" : "ddeqwerdc",
+    "age" : "1"
+  } ]
+}, {
+  "naziv" : "student",
+  "id" : 94,
+  "ime" : "Pera",
+  "prezime" : "Peric",
+  "jmbg" : "2308993548392",
+  "email" : "peraperic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Vule Antica",
+    "id" : 93,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Sone",
+    "id" : 92,
+    "jmbg" : "24356345634345",
+    "nesto" : "sta bre",
+    "age" : "37"
+  } ]
+}, {
+  "naziv" : "osoba",
+  "id" : 98,
+  "ime" : "Djoka",
+  "prezime" : "Djokic",
+  "jmbg" : "23082345648392",
+  "email" : "djokadjokic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Dr kopse",
+    "id" : 97,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Zika",
+    "id" : 95,
+    "nesto" : "dsfgsdfg",
+    "age" : "53"
+  }, {
+    "naziv" : "Neko",
+    "id" : 96,
+    "jmbg" : "243563453472345",
+    "nesto" : "ddeqwerdc",
+    "age" : "1"
+  } ]
+}, {
+  "naziv" : "student",
+  "id" : 101,
+  "ime" : "Pera",
+  "prezime" : "Peric",
+  "jmbg" : "2308993548392",
+  "email" : "peraperic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Vule Antica",
+    "id" : 100,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Sone",
+    "id" : 99,
+    "jmbg" : "24356345634345",
+    "nesto" : "sta bre",
+    "age" : "37"
+  } ]
+}, {
+  "naziv" : "osoba",
+  "id" : 105,
+  "ime" : "Djoka",
+  "prezime" : "Djokic",
+  "jmbg" : "23082345648392",
+  "email" : "djokadjokic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Dr kopse",
+    "id" : 104,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Zika",
+    "id" : 102,
+    "nesto" : "dsfgsdfg",
+    "age" : "53"
+  }, {
+    "naziv" : "Neko",
+    "id" : 103,
+    "jmbg" : "243563453472345",
+    "nesto" : "ddeqwerdc",
+    "age" : "1"
+  } ]
+}, {
+  "naziv" : "student",
+  "id" : 108,
+  "ime" : "Pera",
+  "prezime" : "Peric",
+  "jmbg" : "2308993548392",
+  "email" : "peraperic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Vule Antica",
+    "id" : 107,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Sone",
+    "id" : 106,
+    "jmbg" : "24356345634345",
+    "nesto" : "sta bre",
+    "age" : "37"
+  } ]
+}, {
+  "naziv" : "osoba",
+  "id" : 112,
+  "ime" : "Djoka",
+  "prezime" : "Djokic",
+  "jmbg" : "23082345648392",
+  "email" : "djokadjokic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Dr kopse",
+    "id" : 111,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Zika",
+    "id" : 109,
+    "nesto" : "dsfgsdfg",
+    "age" : "53"
+  }, {
+    "naziv" : "Neko",
+    "id" : 110,
+    "jmbg" : "243563453472345",
+    "nesto" : "ddeqwerdc",
+    "age" : "1"
+  } ]
+}, {
+  "naziv" : "student",
+  "id" : 115,
+  "ime" : "Pera",
+  "prezime" : "Peric",
+  "jmbg" : "2308993548392",
+  "email" : "peraperic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Vule Antica",
+    "id" : 114,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Sone",
+    "id" : 113,
+    "jmbg" : "24356345634345",
+    "nesto" : "sta bre",
+    "age" : "37"
+  } ]
+}, {
+  "naziv" : "osoba",
+  "id" : 119,
+  "ime" : "Djoka",
+  "prezime" : "Djokic",
+  "jmbg" : "23082345648392",
+  "email" : "djokadjokic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Dr kopse",
+    "id" : 118,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Zika",
+    "id" : 116,
+    "nesto" : "dsfgsdfg",
+    "age" : "53"
+  }, {
+    "naziv" : "Neko",
+    "id" : 117,
+    "jmbg" : "243563453472345",
+    "nesto" : "ddeqwerdc",
+    "age" : "1"
+  } ]
+}, {
+  "naziv" : "student",
+  "id" : 122,
+  "ime" : "Pera",
+  "prezime" : "Peric",
+  "jmbg" : "2308993548392",
+  "email" : "peraperic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Vule Antica",
+    "id" : 121,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Sone",
+    "id" : 120,
+    "jmbg" : "24356345634345",
+    "nesto" : "sta bre",
+    "age" : "37"
+  } ]
+}, {
+  "naziv" : "osoba",
+  "id" : 126,
+  "ime" : "Djoka",
+  "prezime" : "Djokic",
+  "jmbg" : "23082345648392",
+  "email" : "djokadjokic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Dr kopse",
+    "id" : 125,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Zika",
+    "id" : 123,
+    "nesto" : "dsfgsdfg",
+    "age" : "53"
+  }, {
+    "naziv" : "Neko",
+    "id" : 124,
+    "jmbg" : "243563453472345",
+    "nesto" : "ddeqwerdc",
+    "age" : "1"
+  } ]
+}, {
+  "naziv" : "student",
+  "id" : 129,
+  "ime" : "Pera",
+  "prezime" : "Peric",
+  "jmbg" : "2308993548392",
+  "email" : "peraperic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Vule Antica",
+    "id" : 128,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Sone",
+    "id" : 127,
+    "jmbg" : "24356345634345",
+    "nesto" : "sta bre",
+    "age" : "37"
+  } ]
+}, {
+  "naziv" : "osoba",
+  "id" : 133,
+  "ime" : "Djoka",
+  "prezime" : "Djokic",
+  "jmbg" : "23082345648392",
+  "email" : "djokadjokic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Dr kopse",
+    "id" : 132,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Zika",
+    "id" : 130,
+    "nesto" : "dsfgsdfg",
+    "age" : "53"
+  }, {
+    "naziv" : "Neko",
+    "id" : 131,
+    "jmbg" : "243563453472345",
+    "nesto" : "ddeqwerdc",
+    "age" : "1"
+  } ]
+}, {
+  "naziv" : "student",
+  "id" : 136,
+  "ime" : "Pera",
+  "prezime" : "Peric",
+  "jmbg" : "2308993548392",
+  "email" : "peraperic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Vule Antica",
+    "id" : 135,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Sone",
+    "id" : 134,
+    "jmbg" : "24356345634345",
+    "nesto" : "sta bre",
+    "age" : "37"
+  } ]
+}, {
+  "naziv" : "osoba",
+  "id" : 140,
+  "ime" : "Djoka",
+  "prezime" : "Djokic",
+  "jmbg" : "23082345648392",
+  "email" : "djokadjokic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Dr kopse",
+    "id" : 139,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Zika",
+    "id" : 137,
+    "nesto" : "dsfgsdfg",
+    "age" : "53"
+  }, {
+    "naziv" : "Neko",
+    "id" : 138,
+    "jmbg" : "243563453472345",
+    "nesto" : "ddeqwerdc",
+    "age" : "1"
+  } ]
+}, {
+  "naziv" : "student",
+  "id" : 143,
+  "ime" : "Pera",
+  "prezime" : "Peric",
+  "jmbg" : "2308993548392",
+  "email" : "peraperic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Vule Antica",
+    "id" : 142,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Sone",
+    "id" : 141,
+    "jmbg" : "24356345634345",
+    "nesto" : "sta bre",
+    "age" : "37"
+  } ]
+}, {
+  "naziv" : "osoba",
+  "id" : 147,
+  "ime" : "Djoka",
+  "prezime" : "Djokic",
+  "jmbg" : "23082345648392",
+  "email" : "djokadjokic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Dr kopse",
+    "id" : 146,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Zika",
+    "id" : 144,
+    "nesto" : "dsfgsdfg",
+    "age" : "53"
+  }, {
+    "naziv" : "Neko",
+    "id" : 145,
+    "jmbg" : "243563453472345",
+    "nesto" : "ddeqwerdc",
+    "age" : "1"
+  } ]
+}, {
+  "naziv" : "student",
+  "id" : 150,
+  "ime" : "Pera",
+  "prezime" : "Peric",
+  "jmbg" : "2308993548392",
+  "email" : "peraperic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Vule Antica",
+    "id" : 149,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Sone",
+    "id" : 148,
+    "jmbg" : "24356345634345",
+    "nesto" : "sta bre",
+    "age" : "37"
+  } ]
+}, {
+  "naziv" : "osoba",
+  "id" : 154,
+  "ime" : "Djoka",
+  "prezime" : "Djokic",
+  "jmbg" : "23082345648392",
+  "email" : "djokadjokic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Dr kopse",
+    "id" : 153,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Zika",
+    "id" : 151,
+    "nesto" : "dsfgsdfg",
+    "age" : "53"
+  }, {
+    "naziv" : "Neko",
+    "id" : 152,
+    "jmbg" : "243563453472345",
+    "nesto" : "ddeqwerdc",
+    "age" : "1"
+  } ]
+}, {
+  "naziv" : "student",
+  "id" : 157,
+  "ime" : "Pera",
+  "prezime" : "Peric",
+  "jmbg" : "2308993548392",
+  "email" : "peraperic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Vule Antica",
+    "id" : 156,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Sone",
+    "id" : 155,
+    "jmbg" : "24356345634345",
+    "nesto" : "sta bre",
+    "age" : "37"
+  } ]
+}, {
+  "naziv" : "osoba",
+  "id" : 161,
+  "ime" : "Djoka",
+  "prezime" : "Djokic",
+  "jmbg" : "23082345648392",
+  "email" : "djokadjokic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Dr kopse",
+    "id" : 160,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Zika",
+    "id" : 158,
+    "nesto" : "dsfgsdfg",
+    "age" : "53"
+  }, {
+    "naziv" : "Neko",
+    "id" : 159,
+    "jmbg" : "243563453472345",
+    "nesto" : "ddeqwerdc",
+    "age" : "1"
+  } ]
+}, {
+  "naziv" : "student",
+  "id" : 164,
+  "ime" : "Pera",
+  "prezime" : "Peric",
+  "jmbg" : "2308993548392",
+  "email" : "peraperic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Vule Antica",
+    "id" : 163,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Sone",
+    "id" : 162,
+    "jmbg" : "24356345634345",
+    "nesto" : "sta bre",
+    "age" : "37"
+  } ]
+}, {
+  "naziv" : "osoba",
+  "id" : 168,
+  "ime" : "Djoka",
+  "prezime" : "Djokic",
+  "jmbg" : "23082345648392",
+  "email" : "djokadjokic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Dr kopse",
+    "id" : 167,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Zika",
+    "id" : 165,
+    "nesto" : "dsfgsdfg",
+    "age" : "53"
+  }, {
+    "naziv" : "Neko",
+    "id" : 166,
+    "jmbg" : "243563453472345",
+    "nesto" : "ddeqwerdc",
+    "age" : "1"
+  } ]
+}, {
+  "naziv" : "student",
+  "id" : 171,
+  "ime" : "Pera",
+  "prezime" : "Peric",
+  "jmbg" : "2308993548392",
+  "email" : "peraperic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Vule Antica",
+    "id" : 170,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Sone",
+    "id" : 169,
+    "jmbg" : "24356345634345",
+    "nesto" : "sta bre",
+    "age" : "37"
+  } ]
+}, {
+  "naziv" : "osoba",
+  "id" : 175,
+  "ime" : "Djoka",
+  "prezime" : "Djokic",
+  "jmbg" : "23082345648392",
+  "email" : "djokadjokic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Dr kopse",
+    "id" : 174,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Zika",
+    "id" : 172,
+    "nesto" : "dsfgsdfg",
+    "age" : "53"
+  }, {
+    "naziv" : "Neko",
+    "id" : 173,
+    "jmbg" : "243563453472345",
+    "nesto" : "ddeqwerdc",
+    "age" : "1"
+  } ]
+}, {
+  "naziv" : "student",
+  "id" : 178,
+  "ime" : "Pera",
+  "prezime" : "Peric",
+  "jmbg" : "2308993548392",
+  "email" : "peraperic@gmail.com",
+  "adresa" : [ {
+    "naziv" : "Vule Antica",
+    "id" : 177,
+    "broj" : "35",
+    "neki podatak" : "ja sam taj podatak"
+  } ],
+  "prijatelji" : [ {
+    "naziv" : "Mixa",
+    "id" : 2,
+    "nesto" : "neko",
+    "age" : "25"
+  }, {
+    "naziv" : "Sone",
+    "id" : 176,
+    "jmbg" : "24356345634345",
+    "nesto" : "sta bre",
+    "age" : "37"
+  } ]
+} ]

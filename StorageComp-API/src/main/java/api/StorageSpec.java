@@ -62,6 +62,7 @@ public abstract class StorageSpec {
 		List<Entity> value = new ArrayList<Entity>();
 		value.add(subEntity);
 		entity.addSubEntity(key, value);
+		update(entity);
 	}
 	
 	public List<Entity> findByName(String name) throws Exception{
@@ -94,17 +95,22 @@ public abstract class StorageSpec {
 		
 		List<String> tokens = new ArrayList<>(Arrays.asList(string.split(" and ")));
 		String[][] doubleTokens = new String[1000][1000];
-		
-		for (int i = 0; i < tokens.size(); i++) {
+		int i = 0;
+		for (; i < tokens.size(); i++) {
 			doubleTokens[i] = tokens.get(i).split("=");
 		}
+		List<Entity> zaBrisanje = new ArrayList<Entity>();
 		
-		for (int j = 0; j < doubleTokens.length; j++) {
+		for (int j = 0; j < i; j++) {
 			for (Entity en : lista) {
 				if (!(en.getProperties().get(doubleTokens[j][0]).startsWith(doubleTokens[j][1]))) {
-					lista.remove(en);
+					zaBrisanje.add(en);
 				}
 			}
+		}
+		
+		for(Entity ent : zaBrisanje) {
+			lista.remove(ent);
 		}
 		
 		return lista;
@@ -114,13 +120,15 @@ public abstract class StorageSpec {
 		List<Entity> listaRezultata = new ArrayList<Entity>();
 		List<Entity> lista = readAll();
 		Map<Integer, String> mapa = new HashMap<Integer, String>();
-		
+		List<Entity> zaBrisanje = new ArrayList<Entity>();
 		for (Entity ent : lista) {
 			if (ent.getProperties().get(key) == null) {
-				lista.remove(ent);
+				zaBrisanje.add(ent);
 			}
 		}
-		
+		for(Entity ent : zaBrisanje) {
+			lista.remove(ent);
+		}
 		for (Entity en : lista) {
 			mapa.put(Integer.valueOf(en.getId()),en.getProperties().get(key));
 		}
@@ -143,28 +151,30 @@ public abstract class StorageSpec {
 	public void deleteSpecial(String string) throws Exception{
 		List<Integer> listaRezultata = new ArrayList<Integer>();
 		List<Entity> lista = readAll();
-		
+		List<Entity> zaBrisanje = new ArrayList<Entity>();
 		List<String> tokens = new ArrayList<>(Arrays.asList(string.split(" and ")));
 		String[][] doubleTokens = new String[1000][1000];
-		
-		for (int i = 0; i < tokens.size(); i++) {
+		int i = 0;
+		for (; i < tokens.size(); i++) {
 			doubleTokens[i] = tokens.get(i).split("=");
 		}
 		
-		for (int j = 0; j < doubleTokens.length; j++) {
+		for (int j = 0; j < i; j++) {
 			for (Entity en : lista) {
 				if (!(en.getProperties().get(doubleTokens[j][0]).startsWith(doubleTokens[j][1]))) {
-					lista.remove(en);
+					zaBrisanje.add(en);
 				}
 			}
 		}
-		
+		for(Entity ent : zaBrisanje) {
+			lista.remove(ent);
+		}
 		for (Entity ent : lista) {
 			listaRezultata.add(ent.getId());
 		}
 		
-		for (Integer i : listaRezultata) {
-			delete(i);
+		for (Integer inte : listaRezultata) {
+			delete(inte);
 		}
 	}
 	

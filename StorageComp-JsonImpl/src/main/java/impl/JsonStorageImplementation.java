@@ -118,6 +118,7 @@ public class JsonStorageImplementation extends StorageSpec {
 		}
 
 	}
+	
 	@Override
 	public List<Entity> readAll() throws IOException{
 		//lista fajlova = FILE.FINDFILES (.json)
@@ -253,7 +254,7 @@ public class JsonStorageImplementation extends StorageSpec {
 		Entity toReturn = null;
 		List<Entity> entities = new ArrayList<Entity>();
 		
-		entities = readAll();
+		entities = readCurrFile();
 		for(Entity entity : entities) {
 			if(entity.getId() == id)
 				toReturn = entity;
@@ -268,6 +269,16 @@ public class JsonStorageImplementation extends StorageSpec {
 		
 		return toReturn;
 	}
+	
+	@Override
+	public void delete(int[] ids) throws IOException {
+		
+		for(int i = 0; i < ids.length; i++) {
+			delete(ids[i]);
+		}
+		
+	}
+	
 	@Override
 	public void delete(int id) throws IOException{
 		
@@ -278,7 +289,7 @@ public class JsonStorageImplementation extends StorageSpec {
 			for(File file : files) {
 				if(file.getAbsolutePath().endsWith(".json")) {
 					currFileName = file.getAbsolutePath();
-					deleteFromOneFile(id);
+					deleteFromOneFileById(id);
 				}
 			}
 		}
@@ -286,7 +297,7 @@ public class JsonStorageImplementation extends StorageSpec {
 		
 	}
 	
-	private void deleteFromOneFile(int id) throws IOException {
+	private void deleteFromOneFileById(int id) throws IOException {
 		
 		FileReader reader = null;
 		try {
@@ -343,10 +354,7 @@ public class JsonStorageImplementation extends StorageSpec {
 		
 	}
 	
-	@Override
-	public void delete(int[] ids) throws IOException {
-		
-	}
+	
 
 
 	private List<Entity> convertFromJsonArrayPrimitiveEntity(JsonArray jsonArray) {

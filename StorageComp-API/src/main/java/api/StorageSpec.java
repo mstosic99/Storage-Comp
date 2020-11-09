@@ -106,7 +106,7 @@ public abstract class StorageSpec {
 			if (lista == null) {
 				entity.getSubEntities().put(key, value);
 			}else {
-				lista.add(entity);
+				lista.add(subEntity);
 				entity.getSubEntities().put(key, lista);
 			}
 		}else {

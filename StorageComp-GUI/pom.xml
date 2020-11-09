@@ -20,14 +20,14 @@
 	</properties>
 	
 	<dependencies>
-	<!-- 
+
 		<dependency>
 			<groupId>SoftComp</groupId>
 			<artifactId>StorageComp-JsonImpl</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 			<scope>runtime</scope>
 		</dependency>
-		 -->
+		
 		 <!-- 
 		<dependency>
 			<groupId>SoftComp</groupId>
@@ -36,14 +36,14 @@
 			<scope>runtime</scope>
 		</dependency>
 		 -->
-		 
+			<!--  
 		<dependency>
 			<groupId>SoftComp</groupId>
 			<artifactId>StorageComp-YamlImpl</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 			<scope>runtime</scope>
 		</dependency>
-
+ -->
 
 		<dependency>
 			<groupId>SoftComp</groupId>

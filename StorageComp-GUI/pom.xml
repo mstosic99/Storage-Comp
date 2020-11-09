@@ -6,6 +6,13 @@
 	<artifactId>StorageComp-GUI</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>StorageComp-GUI</name>
+	  <repositories>
+      <repository>
+        <id>in-project</id>
+        <name>In Project Repo</name>
+        <url>file://${project.basedir}/repo</url>
+      </repository>
+    </repositories>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>11</maven.compiler.source>
@@ -13,11 +20,18 @@
 	</properties>
 	
 	<dependencies>
+	<!-- 
 		<dependency>
 			<groupId>SoftComp</groupId>
 			<artifactId>StorageComp-JsonImpl</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
-
+			<scope>runtime</scope>
+		</dependency>
+		 -->
+		<dependency>
+			<groupId>SoftComp</groupId>
+			<artifactId>StorageComp-YamlImpl</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
 			<scope>runtime</scope>
 		</dependency>
 
@@ -27,8 +41,6 @@
 			<artifactId>StorageComp-API</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 
-			<scope>system</scope>
-			<systemPath>${project.basedir}/lib/StorageComp-API.jar</systemPath> 
 		</dependency>
 	</dependencies>
 </project>

@@ -7,6 +7,14 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>StorageComp-JsonImpl</name>
 	
+	<repositories>
+      <repository>
+        <id>in-project</id>
+        <name>In Project Repo</name>
+        <url>file://${project.basedir}/repo</url>
+      </repository>
+    </repositories>
+    
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>11</maven.compiler.source>
@@ -26,9 +34,6 @@
 			<groupId>SoftComp</groupId>
 			<artifactId>StorageComp-API</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
-
-			<scope>system</scope>
-			<systemPath>${project.basedir}/lib/StorageComp-API.jar</systemPath> 
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
@@ -38,8 +43,26 @@
 			<version>2.11.3</version>
 		</dependency>
 
-
-
 	</dependencies>
-
+<build>
+		<plugins>
+			<!-- any other plugins -->
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>

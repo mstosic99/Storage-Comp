@@ -15,14 +15,15 @@ public class Application {
 	public static void main(String[] args) {
 		
 		try {
-			Class.forName("impl.JsonStorageImplementation");
+			//Class.forName("impl.JsonStorageImplementation");
+			Class.forName("impl.YamlStorageImplementation");
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		StorageSpec spec = ImplementorManager.getStorageSpec();
 		try {
-			spec.setFolderNameAndStart("C:\\Users\\Majkic\\Desktop\\2.json");
+			spec.setFolderNameAndStart("C:\\Users\\Majkic\\Desktop\\3.yaml");
 		} catch (Exception e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();

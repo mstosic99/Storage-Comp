@@ -18,7 +18,7 @@ import model.Entity;
 public abstract class StorageSpec {
 	
 	protected String folderName;
-	protected final int cap = 50;
+	protected int cap = 50;
 	protected String currFileName;
 	
 	private boolean isAutoIncrement;
@@ -216,6 +216,16 @@ public abstract class StorageSpec {
 		runDB(folderName);
 	}
 	
+	public void setFolderName(String folderName) {
+		this.folderName = folderName;
+	}
+
+
+	public void setCap(int cap) {
+		this.cap = cap;
+	}
+
+
 	public String getFolderName() {
 		return folderName;
 	}

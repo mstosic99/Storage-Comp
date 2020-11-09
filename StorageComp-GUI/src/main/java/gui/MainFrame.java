@@ -28,25 +28,26 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.ScrollPaneConstants;
 
+import api.ImplementorManager;
 import api.StorageSpec;
 import model.Entity;
 
 
 public class MainFrame extends JFrame {
 	 private static MainFrame instance = null;
-	 private static String currFolder;
-	 private static StorageSpec spec = MainApp.spec;
+	 private String currFolder;
+	 private StorageSpec spec;
 	 private JTable table;
 	 String[] columnNames = { "Name and ID", "Properties", "SubEntities" }; 
 	 JPanel dugmad;
 	 
-	 public static String getCurrFolder() {
+	 public  String getCurrFolder() {
 		return currFolder;
 	}
 
 
-	public static void setCurrFolder(String currFolder) {
-		MainFrame.currFolder = currFolder;
+	public void setCurrFolder(String currFolder) {
+		currFolder = currFolder;
 	}
 
 
@@ -90,6 +91,45 @@ public class MainFrame extends JFrame {
 	                 File file = fileChooser.getSelectedFile();
 	                 label.setText("Folder Selected: " + file.getName());
 	                 currFolder = file.getAbsolutePath();
+	                 
+	                System.out.println(currFolder);
+	                if (currFolder.endsWith("json")) {
+	                	try {
+							Class.forName("impl.JsonStorageImplementation");
+						} catch (ClassNotFoundException e1) {
+							// TODO Auto-generated catch block
+							JOptionPane.showMessageDialog(MainFrame.getInstance(), "Pogresan JAR", "Warning",
+							        JOptionPane.WARNING_MESSAGE);
+							
+							System.exit(0);
+						}
+	                }else if(currFolder.endsWith("yaml")){
+	                	try {
+							Class.forName("impl.YamlStorageImplementation");
+						} catch (ClassNotFoundException e1) {
+							// TODO Auto-generated catch block
+							JOptionPane.showMessageDialog(MainFrame.getInstance(), "Pogresan JAR", "Warning",
+							        JOptionPane.WARNING_MESSAGE);
+							
+							System.exit(0);
+						}
+	                }else if(currFolder.endsWith("custom")) {
+	                	try {
+							Class.forName("impl.CustomStorageImplementation");
+						} catch (ClassNotFoundException e1) {
+							// TODO Auto-generated catch block
+							JOptionPane.showMessageDialog(MainFrame.getInstance(), "Pogresan JAR", "Warning",
+							        JOptionPane.WARNING_MESSAGE);
+							
+							System.exit(0);
+						}
+	                }else {
+	                	JOptionPane.showMessageDialog(MainFrame.getInstance(), "Nepoznata baza", "Warning",
+						        JOptionPane.WARNING_MESSAGE);
+						
+						System.exit(0);
+	                }
+	                spec = ImplementorManager.getStorageSpec();
 	                 try {
 						spec.setFolderNameAndStart(currFolder);
 					} catch (Exception e1) {

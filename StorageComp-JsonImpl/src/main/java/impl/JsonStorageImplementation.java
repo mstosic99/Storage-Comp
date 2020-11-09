@@ -70,31 +70,33 @@ public class JsonStorageImplementation extends StorageSpec {
 					object.addProperty(entry.getKey(), entry.getValue());
 				}
 			}
+			if (entity.getSubEntities() != null) {
+				if (!entity.getSubEntities().isEmpty()) {
+					// Prolazimo kroz sva polja koja kao value sadrze ugnjezdene entitete(moze ih
+					// biti vise, ali na istom hijerarhijskom nivou)
+					for (HashMap.Entry<String, List<Entity>> subEntitiesPack : entity.getSubEntities().entrySet()) {
 
-			if (!entity.getSubEntities().isEmpty()) {
-				// Prolazimo kroz sva polja koja kao value sadrze ugnjezdene entitete(moze ih
-				// biti vise, ali na istom hijerarhijskom nivou)
-				for (HashMap.Entry<String, List<Entity>> subEntitiesPack : entity.getSubEntities().entrySet()) {
+						JsonArray internalArray = new JsonArray();
 
-					JsonArray internalArray = new JsonArray();
+						// Prolazimo kroz listu ugnjezdenih entiteta, da bi ih dodali u JsonArray
+						for (Entity subEntity : subEntitiesPack.getValue()) {
 
-					// Prolazimo kroz listu ugnjezdenih entiteta, da bi ih dodali u JsonArray
-					for (Entity subEntity : subEntitiesPack.getValue()) {
+							JsonObject internalObject = new JsonObject();
 
-						JsonObject internalObject = new JsonObject();
+							internalObject.addProperty("naziv", subEntity.getNaziv());
+							internalObject.addProperty("id", subEntity.getId());
 
-						internalObject.addProperty("naziv", subEntity.getNaziv());
-						internalObject.addProperty("id", subEntity.getId());
+							// Za svaki entitet prolazimo kroz njegove propertije (samo raw stringovi)
+							for (HashMap.Entry<String, String> properties : subEntity.getProperties().entrySet())
+								internalObject.addProperty(properties.getKey(), properties.getValue());
+							internalArray.add(internalObject);
 
-						// Za svaki entitet prolazimo kroz njegove propertije (samo raw stringovi)
-						for (HashMap.Entry<String, String> properties : subEntity.getProperties().entrySet())
-							internalObject.addProperty(properties.getKey(), properties.getValue());
-						internalArray.add(internalObject);
-
+						}
+						object.add(subEntitiesPack.getKey(), internalArray);
 					}
-					object.add(subEntitiesPack.getKey(), internalArray);
 				}
 			}
+			
 			jArray.add(object);
 
 			fileWriter.write(beautifyJson(jArray.toString()));
@@ -258,12 +260,15 @@ public class JsonStorageImplementation extends StorageSpec {
 		for(Entity entity : entities) {
 			if(entity.getId() == id)
 				toReturn = entity;
-			for(HashMap.Entry<String, List<Entity>> subEntity : entity.getSubEntities().entrySet()) {
-				for(Entity e : subEntity.getValue()) {
-					if(e.getId() == id)
-						toReturn = e;
+			if(entity.getSubEntities() != null) {
+				for(HashMap.Entry<String, List<Entity>> subEntity : entity.getSubEntities().entrySet()) {
+					for(Entity e : subEntity.getValue()) {
+						if(e.getId() == id)
+							toReturn = e;
+					}
 				}
 			}
+			
 				
 		}
 		

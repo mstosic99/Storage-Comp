@@ -28,6 +28,15 @@
 			<scope>runtime</scope>
 		</dependency>
 		 -->
+		 <!-- 
+		<dependency>
+			<groupId>SoftComp</groupId>
+			<artifactId>StorageComp-CustomImpl</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<scope>runtime</scope>
+		</dependency>
+		 -->
+		 
 		<dependency>
 			<groupId>SoftComp</groupId>
 			<artifactId>StorageComp-YamlImpl</artifactId>
@@ -43,4 +52,35 @@
 
 		</dependency>
 	</dependencies>
+	<build>
+		<plugins>
+			<!-- any other plugins -->
+			<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-assembly-plugin</artifactId>
+    <executions>
+        <execution>
+            <phase>package</phase>
+            <goals>
+                <goal>single</goal>
+            </goals>
+            <configuration>
+            
+                <archive>
+                <manifest>
+                    <mainClass>
+                        gui.MainApp
+                    </mainClass>
+                </manifest>
+                </archive>
+                <descriptorRefs>
+                    <descriptorRef>jar-with-dependencies</descriptorRef>
+                </descriptorRefs>
+            </configuration>
+        </execution>
+    </executions>
+</plugin>
+		</plugins>
+	</build>
+	
 </project>

@@ -101,7 +101,20 @@ public abstract class StorageSpec {
 		Entity entity = read(id);
 		List<Entity> value = new ArrayList<Entity>();
 		value.add(subEntity);
-		entity.addSubEntity(key, value);
+		if (entity.getSubEntities() != null) {
+			List<Entity> lista = entity.getSubEntities().get(key);
+			if (lista == null) {
+				entity.getSubEntities().put(key, value);
+			}else {
+				lista.add(entity);
+				entity.getSubEntities().put(key, lista);
+			}
+		}else {
+			Map<String, List<Entity>> mapa = new HashMap<String, List<Entity>>();
+			mapa.put(key, value);
+			entity.setSubEntities(mapa);
+		}
+		
 		update(entity);
 	}
 	
@@ -270,15 +283,18 @@ public abstract class StorageSpec {
 					if(property.getKey().equals("id"))
 						Entity.getUsedIDs().add(Integer.parseInt(property.getValue()));
 				}
-				
-				for(HashMap.Entry<String, List<Entity>> subEntity : entity.getSubEntities().entrySet()) {
-					for(Entity e : subEntity.getValue()) {
-						Entity.getUsedIDs().add((Integer) e.getId());
+				if(entity.getSubEntities() != null) {
+					for(HashMap.Entry<String, List<Entity>> subEntity : entity.getSubEntities().entrySet()) {
+						for(Entity e : subEntity.getValue()) {
+							Entity.getUsedIDs().add((Integer) e.getId());
+						}
 					}
 				}
+				
 			}
 			
 		}catch (Exception e) {
+			e.printStackTrace();
 			System.err.println("Gadan Exception");
 		}
 	}

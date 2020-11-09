@@ -10,20 +10,20 @@ import api.ImplementorManager;
 import api.StorageSpec;
 import model.Entity;
 
-public class Application {
+public class Test {
 
 	public static void main(String[] args) {
 		
 		try {
-			//Class.forName("impl.JsonStorageImplementation");
-			Class.forName("impl.YamlStorageImplementation");
+			Class.forName("impl.JsonStorageImplementation");
+			//Class.forName("impl.YamlStorageImplementation");
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		StorageSpec spec = ImplementorManager.getStorageSpec();
 		try {
-			spec.setFolderNameAndStart("C:\\Users\\Majkic\\Desktop\\3.yaml");
+			spec.setFolderNameAndStart("C:\\Users\\Majkic\\Desktop\\2.json");
 		} catch (Exception e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();

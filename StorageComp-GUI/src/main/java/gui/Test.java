@@ -15,15 +15,16 @@ public class Test {
 	public static void main(String[] args) {
 		
 		try {
-			Class.forName("impl.JsonStorageImplementation");
+			//Class.forName("impl.JsonStorageImplementation");
 			//Class.forName("impl.YamlStorageImplementation");
+			Class.forName("impl.CustomStorageImplementation");
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		StorageSpec spec = ImplementorManager.getStorageSpec();
 		try {
-			spec.setFolderNameAndStart("C:\\Users\\Majkic\\Desktop\\2.json");
+			spec.setFolderNameAndStart("C:\\Users\\Majkic\\Desktop\\1.custom");
 		} catch (Exception e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
@@ -100,9 +101,9 @@ public class Test {
 			//spec.update(finalEntity1);
 			//spec.deleteSpecial("ime=Andreja");
 			//spec.deleteSpecial("jmbg=23082345648392");
-			List<Entity> listaE = new ArrayList<Entity>();
-			listaE = spec.sortSpecial("ime", true);
-			System.out.println(listaE.toString());
+			//List<Entity> listaE = new ArrayList<Entity>();
+			//listaE = spec.sortSpecial("ime", true);
+			//System.out.println(listaE.toString());
 		}catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();

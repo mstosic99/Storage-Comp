@@ -343,7 +343,7 @@ public class MainFrame extends JFrame {
 					    	for (Entry<String, String> entry2 : ent.getProperties().entrySet()) {
 							    String kljuc = entry2.getKey();
 							    String value = entry2.getValue();
-							    data[i][2] += kljuc + " : " + value + "    ";
+							    data[i][2] += " " + kljuc + " : " + value + "    ";
 							}
 					    	
 					    }

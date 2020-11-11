@@ -12,8 +12,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
 
 import api.ImplementorManager;
 import api.StorageSpec;
